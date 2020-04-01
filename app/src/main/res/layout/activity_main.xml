@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context="upec.projetandroid2017_2018.MainActivity"
+    android:background="@drawable/images">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/essai" />
+
+    <Button
+        android:id="@+id/jeu"
+
+        android:layout_width="227dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="changeSound"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/button"
+        android:text="@string/play"
+        android:textColor="#FBFFFA"
+        android:textSize="32sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/setting"
+
+        android:layout_width="227dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:onClick="getSetting"
+        android:text="@string/settings"
+        android:textColor="#FBFFFA"
+        android:textSize="32sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jeu" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="272dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/fond_linear"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:theme="@style/Theme.Transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561">
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:checked="true"
+            android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/music"
+            android:textSize="20dp"
+            tools:checked="true" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:checked="false"
+            android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/soundclick"
+            android:textSize="20dp" />
+
+        <Switch
+            android:id="@+id/Stouch"
+            android:layout_width="260dp"
+            android:layout_height="52dp"
+            android:checked="true"
+            android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Touch"
+            tools:checked="true" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
